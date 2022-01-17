@@ -1,0 +1,134 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Open API workflow for model and format conversion of ML Frameworks",
+    "contact": {
+      "name": "BISAG",
+      "url": "http://127.0.0.1:5000"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:5000/"
+    },
+    {
+      "url": "https://127.0.0.1:5000/"
+    }
+  ],
+  "paths": {
+    "/kconversion": {
+      "post": {
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Model is converted successfully.",
+            "content": {}
+          },
+          "404": {
+            "description": "Service not available.",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/tfconversion": {
+      "post": {
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Model is converted successfully.",
+            "content": {}
+          },
+          "404": {
+            "description": "Service not available.",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/ptconversion": {
+      "post": {
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Model is converted successfully.",
+            "content": {}
+          },
+          "400": {
+            "description": "Service is not available.",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/tpconversion": {
+      "post": {
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Model is converted successfully.",
+            "content": {}
+          },
+          "400": {
+            "description": "Service is not available.",
+            "content": {}
+          }
+        }
+      }
+    }
+  },
+  "components": {}
+}
